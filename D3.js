@@ -2,7 +2,7 @@ const starWarsCharacters = [
   {
     name: "Luke Skywalker",
     height: 172,
-    mass: 277,
+    mass: 77,
     hair_color: "blond",
     skin_color: "fair",
     eye_color: "blue",
@@ -268,3 +268,9 @@ console.log(characters)
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 
+function casuale() {
+  let randomIndex = Math.floor(Math.random() * 10);
+  console.log(`Vi presento ${starWarsCharacters[randomIndex].name}, dall'alto dei suoi ${starWarsCharacters[randomIndex].height} cm e dalla massa di ben ${starWarsCharacters[randomIndex].mass} kg, vi accompegnarà nel fantastico mondo di Star Wars!`)
+}
+
+casuale()
