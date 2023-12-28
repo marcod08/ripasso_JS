@@ -15,16 +15,10 @@ console.log(area(3, 4))
 */
 
 function crazySum(a, b) {
-    let somma;
-    if (a === b) {
-        somma = (a + b) * 3;
-    } else {
-        somma = a + b;
-    }
-    return somma;
+    return (a === b) ? (a + b) * 3 : a + b;
 }
 
-console.log(crazySum(2, 3))
+console.log(crazySum(2, 3));
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -32,16 +26,10 @@ console.log(crazySum(2, 3))
 */
 
 function crazyDiff(a, b = 19) {
-    let diff;
-    if (a > 19) {
-        diff = (a - b) * 3;
-    } else {
-        diff = a - b;
-    }
-    return diff;
+    return (a > 19) ? (a - b) * 3 : a - b;
 }
 
-console.log(crazyDiff(5))
+console.log(crazyDiff(5));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -49,11 +37,7 @@ console.log(crazyDiff(5))
 */
 
 function boundary(n) {
-    if (!isNaN(n) && n >= 20 && n <= 100 || n === 400) {
-        return true;
-    } else {
-        return false;
-    }
+    return !isNaN(n) && n >= 20 && n <= 100 || n === 400
 }
 
 console.log(boundary(400))
@@ -65,18 +49,11 @@ console.log(boundary(400))
 */
 
 function epify(string) {
-    if (typeof string === "string") {
-        if (!string.startsWith("EPICODE")) {
-            return "EPICODE " + string;
-        } else {
-            return string;
-        }
-    } else {
-        return "non è una stringa";
-    }
+    return typeof string === "string" && !string.startsWith("EPICODE") ? "EPICODE " + string : string;
 }
 
 console.log(epify("EPICODE"));
+
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -84,11 +61,7 @@ console.log(epify("EPICODE"));
 */
 
 function check3and7(n) {
-    if (n > 0 && n % 3 === 0 || n % 7 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return n > 0 && n % 3 === 0 || n % 7 === 0 //refactor
 }
 
 console.log(check3and7(9))
@@ -122,7 +95,7 @@ console.log(upperFirst("ciao a tutti"));
 */
 
 function cutString(string) {
-    return string.slice(1,-1);
+    return string.slice(1, -1);
 }
 
 console.log(cutString("ciao belli"))
@@ -134,8 +107,8 @@ console.log(cutString("ciao belli"))
 function giveMeRandom(n) {
     let randomArray = []
     if (!isNaN(n)) {
-        for (let i = 0; i < n; i++){
-            let randomNumber = Math.floor(Math.random()* 11);
+        for (let i = 0; i < n; i++) {
+            let randomNumber = Math.floor(Math.random() * 11);
             randomArray.push(randomNumber);
         }
     }
