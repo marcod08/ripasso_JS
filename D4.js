@@ -136,7 +136,7 @@ function giveMeRandom(n) {
     if (!isNaN(n)) {
         for (let i = 0; i < n; i++){
             let randomNumber = Math.floor(Math.random()* 11);
-            randomArray.push(randomNumber)[i];
+            randomArray.push(randomNumber);
         }
     }
     return randomArray;
